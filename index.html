@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechQuiz - Programming Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>⚡ TechQuiz</h1>
+            <p>Challenge Your Coding Knowledge</p>
+        </header>
+
+        <!-- Category Selection -->
+        <section id="home" class="screen">
+            <h2>Choose Your Category</h2>
+            <p>Select a subject to start your quiz.</p>
+
+            <div class="categories">
+                <button onclick="startQuiz('Python')">🐍 Python</button>
+                <button onclick="startQuiz('Java')">☕ Java</button>
+                <button onclick="startQuiz('SQL')">🗄️ SQL</button>
+                <button onclick="startQuiz('HTML & CSS')">🌐 HTML & CSS</button>
+                <button onclick="startQuiz('JavaScript')">⚡ JavaScript</button>
+                <button onclick="startQuiz('Computer Fundamentals')">💻 Computer Fundamentals</button>
+            </div>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz" class="screen hidden">
+
+            <div class="quiz-info">
+                <span id="category"></span>
+                <span id="timer">⏱ 10:00</span>
+            </div>
+
+            <div class="progress-container">
+                <div id="progress"></div>
+            </div>
+
+            <p id="question-count"></p>
+            <h2 id="question"></h2>
+            <p id="question-type"></p>
+
+            <div id="options"></div>
+
+            <button id="next-btn" onclick="nextQuestion()">
+                Next Question →
+            </button>
+
+        </section>
+
+        <!-- Result Screen -->
+        <section id="result" class="screen hidden">
+            <h2>🎉 Quiz Completed!</h2>
+
+            <div class="score-circle">
+                <h1 id="score">0/0</h1>
+                <p>Your Score</p>
+            </div>
+
+            <h3 id="message"></h3>
+
+            <p id="percentage"></p>
+
+            <div id="review"></div>
+
+            <button onclick="goHome()">Try Another Quiz</button>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
